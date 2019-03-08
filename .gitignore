@@ -8,7 +8,7 @@ node_modules/
 public/
 .deploy_git/
 
-# Next 主题定制，不能忽略
+# Next specify 
 
 !themes/next/_config.yml
 !themes/next/source/images/favicon-16x16.ico
