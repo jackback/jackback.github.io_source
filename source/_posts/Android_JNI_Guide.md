@@ -18,6 +18,11 @@ jni中结构体层次结构
 [![002_JaveJNIType2.png](https://i.loli.net/2018/12/15/5c14f2f8833c4.png)](https://i.loli.net/2018/12/15/5c14f2f8833c4.png)
 
 
+jni sign
+![003_JavaJNISign.png.jpeg](https://i.loli.net/2019/08/15/h7ARw8Csi1QaKHM.jpg)
+
+
+
 下面是访问String的一些方法：
 
     GetStringUTFChars 将jstring转换成为UTF-8格式的char*    /  ReleaseStringUTFChars  释放指向UTF-8格式的char*的指针

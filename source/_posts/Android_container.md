@@ -1,7 +1,7 @@
 ---
-title: Android中Vector、ArrayList、LinkedList和HashMap
-date: 2016-09-19 12:22:33
-tags: [Vector, ArrayList, LinkedList, HashMap]
+title: Android中Vector、ArrayList、LinkedList和HashMap/ArrayMap/SparseArray簇
+date: 2019-03-14 12:22:33
+tags: [Vector, ArrayList, LinkedList, HashMap, ArrayMap, SparseArray]
 categories: Android
 ---
 
@@ -65,3 +65,56 @@ public class LinkedList<E> extends AbstractSequentialList<E> implements
 # HashMap类
 
 Map接口 public interface Map<K,V>  包含k-v 对的集合
+
+
+# ArrayMap类
+
+
+# SparseMap簇类 
+### 特点, 以及在什么场景使用?
+    Key为int型的Map时使用.
+    android希望我们用SparseArray在一些情况下代替HashMap来使用，因为它有更好的性能
+
+    
+### 基本操作
+    put(int key, E value);
+    get(int key); //E value
+    get(int key, E valueIfKeyNotFound)
+    delete(int key)
+    removeAt(int index)
+    keyAt(int index) //int key; 通过index得到该index位置的key
+    valueAt(int index)
+    
+    
+### 遍历
+    //按照添加顺序, 遍历key,然后再得到value
+    SparseArray<E> sparseArray = new SparseArray<>();
+
+    for(int i = 0; i < sparseArray.size(); i++) {
+        int key = sparseArray.keyAt(i);
+        E value = sparseArray.get(key);
+    }
+    //按照添加顺序, 直接遍历value;
+    SparseArray<E> sparseArray = new SparseArray<>();
+
+    for(int i = 0; i < sparseArray.size(); i++) {
+        E value = sparseArray.valueAt(i);
+    }
+
+
+# 其他
+    据key-value中的value类型不同，android又给封装了SparseIntArray, SparseBooleanArray, SparseLongArray等等，
+    使用方法和SparseArray都大同小异，只要你会使用Map，那么你就会使用SparseArray。
+
+
+
+
+    
+# TO DO
+https://www.cnblogs.com/LipeiNet/p/5888513.html
+
+
+
+
+
+
